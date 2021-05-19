@@ -6,10 +6,9 @@ from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 from flask import Flask, render_template, jsonify
 from flask import Flask
-import os
         
-#engine = create_engine("postgresql://postgres:postgres@localhost:5432/economy_db")
-engine = create_engine(os.environ.get('DATABASE_URL', ''))
+engine = create_engine("postgresql://postgres:postgres@localhost:5432/economy_db")
+
 Base = automap_base()
 Base.prepare(engine, reflect=True)
 
@@ -69,17 +68,19 @@ def Phillips():
 @app.route("/appPhillips")
 def appPhillips(): 
     session = Session(engine)
-    results2= session.query(Inflation.country_name,Inflation.unemployment,Inflation.country_code,Inflation.the_year,Inflation.inflation,Inflation.population,Inflation.color).all()
+
+    results = session.query(Inflation.country_name,Inflation.unemployment,Inflation.country_code,Inflation.the_year,Inflation.inflation,Inflation.population,Inflation.color)
+   
+    columns = [result['name'] for result in results.column_descriptions] 
     
     renames = {"unemployment": "Unemployment", "the_year": "Year", "inflation":"Inflation","population":"Population", "color":"Color", "country_name":"country_name","country_code":"country_code"}
-    results_list2 = [dict(rez) for rez in (results2)]
-
-    results_list4 = [{ renames[key]: value for key,value in result.items()} for result in results_list2]
+    
+    row2dict = lambda r: {renames[c]:val for c,val in zip(columns,r)}
+    results_list = [row2dict(rez) for rez in results]
 
     session.close()
 
-
-    return jsonify(results_list4)
+    return jsonify(results_list)
 
 
 

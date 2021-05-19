@@ -7,7 +7,10 @@ from sqlalchemy import create_engine, func
 from flask import Flask, render_template, jsonify
 from flask import Flask
         
-engine = create_engine("postgresql://postgres:postgres@localhost:5432/economy_db")
+import os
+
+#engine = create_engine("postgresql://postgres:postgres@localhost:5432/economy_db")
+engine = create_engine(os.environ.get('DATABASE_URL', ''))
 
 Base = automap_base()
 Base.prepare(engine, reflect=True)

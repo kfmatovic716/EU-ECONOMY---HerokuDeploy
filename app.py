@@ -71,14 +71,11 @@ def Phillips():
 @app.route("/appPhillips")
 def appPhillips(): 
     session = Session(engine)
-
     results = session.query(Inflation.country_name,Inflation.unemployment,Inflation.country_code,Inflation.the_year,Inflation.inflation,Inflation.population,Inflation.color)
-   
     columns = [result['name'] for result in results.column_descriptions] 
-    
     renames = {"unemployment": "Unemployment", "the_year": "Year", "inflation":"Inflation","population":"Population", "color":"Color", "country_name":"country_name","country_code":"country_code"}
     
-    row2dict = lambda r: {renames[c]:val for c,val in zip(columns,r)}
+    row2dict = lambda r: {renames[c]: str(val) for c,val in zip(columns,r)}
     results_list = [row2dict(rez) for rez in results]
 
     session.close()
@@ -94,18 +91,16 @@ def barchartrace():
 @app.route("/appBar")
 def appBar():
     session = Session(engine)
-    results3 = session.query(Gdp2.name,Gdp2.country_code,Gdp2.year,Gdp2.value,Gdp2.lastvalue).all()
-
+    results = session.query(Gdp2.name,Gdp2.country_code,Gdp2.year,Gdp2.value,Gdp2.lastvalue)
+    columns = [result['name'] for result in results.column_descriptions] 
     renames = {"name": "name", "year": "year", "value":"value","lastvalue":"lastValue", "country_code":"country_code"}
-    results_list5 = [dict(rez) for rez in (results3)]
-
-    results_list5 = [{ renames[key]: int(value) if "value" in key else value for key,value in result.items()} for result in results_list5]
     
+    row2dict = lambda r: {renames[c]: str(val) for c,val in zip(columns,r)}
+    results_list = [row2dict(rez) for rez in results]
 
     session.close()
 
-
-    return jsonify(results_list5)
+    return jsonify(results_list)
 
 
 @app.route("/choropleth")

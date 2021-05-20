@@ -14,10 +14,11 @@
     <script defer type="text/javascript" src="../static/phillips_curve/appPhillips.js"></script>
 </head>
 
-<body class="background-img">
-    <nav class="navbar navbar-light">
+<body>
+    <nav class="navbar navbar-light" style= "background: url('https://pes.cor.europa.eu/sites/default/files/styles/article__news___detailpage/public/articles/coins-1600.jpeg?itok=0zyfBY4B');
+    background-size: cover; color: burlywood"> 
         <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1"><h1><a href="/"><img src=../static/images/barcharteuro.jpg alt="barcharteuro" width="150" height="150" style="border: whitesmoke 3px solid"/></a> The European Union Economy</h1>
+            <span class="navbar-brand mb-0 h1"><h1><a href="/"></a> The European Union Economy</h1>
           </span>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -26,17 +27,17 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/">
-                            <h5>Home</h5>
+                            <h5>HOME</h5>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="resources">
-                            <h5>Resources</h5>
+                            <h5>RESOURCES</h5>
                         </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <h5>Economic Indicators</h5>
+                            <h5>ECONOMIC INDICATORS</h5>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
@@ -52,25 +53,28 @@
     </nav>
 
     <div class='container'>
-        <div id="inflation" style="text-align: center">
-            <h2>Inflation vs Unemployment Rates</h2>
-            <hr>
-            <!-- <div class="row"> -->
-                <!-- <div class="col-xs-12  col-md-9"> -->
+        <div class="row">
+            <div id="inflation" class="col-md-8">
+                <h2>Inflation vs Unemployment Rates</h2>
+                <hr>
+                <input id="slider" type="range" min="2005" max="2019" value="2005" step="1" />
+                <span id="range">2005</span>
+                <button name="play" id="play">Play</button>
+                <div id="chart"></div>
+                <br> 
+            </div>
 
-                    <input id="slider" type="range" min="2005" max="2019" value="2005" step="1" />
-                    <span id="range">2005</span>
-                    <button name="play" id="play">Play</button>
-                    <div id="chart"></div>
-                    <br>
-                    
-                <!-- </div> -->
+            <div id="description_bubbles" class="col-md-8">
+                <p>The Philips curve, named after economist William Philips, describes the short run inverse relationship 
+                between the unemployment rate and inflation. In essence, as unemployment falls, inflation rises. While the 
+                theoretical underpinnings of the curve have been shown to be too simplistic, it is instructive to show the 
+                relationship here, as it pertains to the European model with the passage of time. In this instance, although 
+                there are some years for which an inverse relationship could be determined, the relationship is highly unstable. </p>
+            </div>   
+        </div>
+    </div>
 
-
-
-
-            <!-- </div> -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
 
 </html>

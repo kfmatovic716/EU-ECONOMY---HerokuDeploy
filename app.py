@@ -7,10 +7,7 @@ from sqlalchemy import create_engine, func
 from flask import Flask, render_template, jsonify
 from flask import Flask
         
-import os
-
-#engine = create_engine("postgresql://postgres:postgres@localhost:5432/economy_db")
-engine = create_engine(os.environ.get('DATABASE_URL', ''))
+engine = create_engine("postgresql://postgres:postgres@localhost:5432/economy_db")
 
 Base = automap_base()
 Base.prepare(engine, reflect=True)
@@ -71,11 +68,14 @@ def Phillips():
 @app.route("/appPhillips")
 def appPhillips(): 
     session = Session(engine)
+
     results = session.query(Inflation.country_name,Inflation.unemployment,Inflation.country_code,Inflation.the_year,Inflation.inflation,Inflation.population,Inflation.color)
+   
     columns = [result['name'] for result in results.column_descriptions] 
+    
     renames = {"unemployment": "Unemployment", "the_year": "Year", "inflation":"Inflation","population":"Population", "color":"Color", "country_name":"country_name","country_code":"country_code"}
     
-    row2dict = lambda r: {renames[c]: str(val) for c,val in zip(columns,r)}
+    row2dict = lambda r: {renames[c]:val for c,val in zip(columns,r)}
     results_list = [row2dict(rez) for rez in results]
 
     session.close()
@@ -90,9 +90,13 @@ def barchartrace():
 
 @app.route("/appBar")
 def appBar():
+
     session = Session(engine)
+
     results = session.query(Gdp2.name,Gdp2.country_code,Gdp2.year,Gdp2.value,Gdp2.lastvalue)
+   
     columns = [result['name'] for result in results.column_descriptions] 
+    
     renames = {"name": "name", "year": "year", "value":"value","lastvalue":"lastValue", "country_code":"country_code"}
     
     row2dict = lambda r: {renames[c]: str(val) for c,val in zip(columns,r)}
@@ -103,6 +107,8 @@ def appBar():
     return jsonify(results_list)
 
 
+
+
 @app.route("/choropleth")
 def choropleth():
     return render_template('population.html')
@@ -110,8 +116,7 @@ def choropleth():
 
 @app.route("/")
 def welcome():
-   
-    return render_template('index.html')
+    return render_template('index_masonry.html')
 
 @app.route("/resources")
 def appresources():

@@ -63,8 +63,8 @@ $(document).ready(function() {
         .attr("dy", -13)
         .text(d => d3.format(",")(d * 10));
 
-    d3.csv("static/phillips_curve/clean_CPI_unemp.csv").then(function(data) {   
-        console.log(data)})
+    // d3.csv("static/phillips_curve/clean_CPI_unemp.csv").then(function(data) {   
+        // console.log(data)})
 
     d3.json("appPhillips").then(function(data) {
         

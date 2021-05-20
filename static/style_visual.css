@@ -1,228 +1,254 @@
-    h1 {
-        margin-left: 20px;
-        margin-bottom: 15px;
-        padding-left: 5px;
-        font-size: 40px;
-        color: yellow;
-        text-decoration: underline;
-    }
-    
-    h2 {
-        font-size: 30px;
-        color: darkblue;
-        text-align: center;
-        padding-left: 10px;
-        padding-top: 10px;
-        text-decoration: bold;
-    }
-    
-    h3 {
-        color: rgb(0, 153, 153);
-        text-align: left;
-        padding-left: 10px;
-        text-decoration: bold;
-    }
-    
-    h4 {
-        text-align:center;
-        padding-right: 20px;
-        padding-top: 20px;
-        color: darkblue;
-    }
-    
-    h5 {
-        /*text-align: left; */
-        color: lightblue;
-        font-weight: bold;
-        padding-left: 20px;
-    }
-    /* resource page bullets */
-    ul {
-        margin-left: 40px;
-    }
-    /* Default font style and color of background  */
-    
-    body {
-        background-color: whitesmoke;
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 17px;
-    }
-    
-    .background-img {
-        background-image: url("images/economy.jpeg");
-        background-repeat: repeat;
-        background-position: center top;
-        background-color: rgb(15, 15, 107);
-        margin-top: auto;
-    }
-    
-    .resource-col1,
-    .resource-col2 {
-        border: solid 5px whitesmoke;
-        background-color: lightblue;
-        width: 500px;
-        float: left;
-        margin: 10px;
-        margin-right: 30px;
-        padding-left: 50px;
-        margin-left: 80px;
-    }
-    
-    .container {
-        margin-right: 10px;
-        margin-left: 30px;
-        padding-left: 10px;
-    }
-    /* Format of navigation bar */
-    
-    .navbar {
-        background-color: rgb(15, 15, 107);
-        margin-bottom: 5px;
-    }
-    /* Color of navbar icon */
-    
-    .navbar-toggler {
-        background-color: lightblue;
-    }
-    /* Footer format */
-    
-    footer {
-        background-color: lightblue;
-        margin-top: 1050px;
-        margin-bottom:50px
-        padding-top: 10px;
-        padding-bottom: 30px;
-        padding-right: 20px;
-        display: block;
-        height: 40px;
-    }
-   
-   /* Charts with js */
-    #main-wrapper, 
-    #population {
-        border: solid 5px whitesmoke;
-        background-color: lightblue;
-        margin-bottom: 20px;
-        width:fit-content;
-        margin-left: 300px;
-        margin-right: 20px;
-        margin-top: 10px;
-    }
+/* Default font style and color of background  */
+body {
+    background-color: darkblue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+}
 
-    #inflation {
-        border: solid 5px whitesmoke;
-        background-color: lightblue;
-        margin-bottom: 20px;
-        padding-left: 20px;
-        width:fit-content;
-        margin-left: 350px; 
-    }
-    
-    #gdp {
-        border: solid 5px whitesmoke;
-        background-color: lightblue;
-        margin-bottom: 20px;
-        width:fit-content;
-        margin-left: 200px;
-        /* padding-left:50px; */
-        padding-bottom:50px;
-        margin-right: 20px
-    }
-    
-    #team {
-        border: solid 5px whitesmoke;
-        background-color: lightblue;
-        margin-top: 10px;
-    }
-    
-    .row {
-        margin-top: 10px;
-        margin-left: 20px;
-        padding-left: 30px;
-        margin-right: 20px;
-    }
-    
+/* Resource page */
+.resource-col1,
+.resource-col2 {
+    border: solid 5px whitesmoke;
+    background-color: lightblue;
+    width: 500px;
+    float: left;
+    margin: 10px;
+    margin-right: 30px;
+    padding-left: 50px;
+    margin-left: 80px;
+}
 
-    /* carousel slides  */
-    .carousel {
-        background: lightblue;
-        margin-left: 10px;
-        margin-right: 10px;
-    } 
+.row {
+    margin-top: 10px;
+    margin-left: 20px;
+    padding-left: 30px;
+    margin-right: 20px;
+}
+
+#team {
+    border: solid 5px whitesmoke;
+    background-color: lightblue;
+    margin-top: 10px;
+}
+
+/* Resource page bullets */
+ul {
+    margin-left: 40px;
+}
+
+/* Dashboard title */
+h1 {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    padding-left: 5px;
+    font-size: 40px;
+    color: yellow;
+    text-decoration: bold;
+}
     
-    #carouselExampleControls {
-        height:1000px;
-        width:700px;
-        margin-top: 20px;
-        margin-left:400px;
-        margin-right:300px;
-        position:absolute;
-        border: solid 5px whitesmoke;
-    
-    }
-    
-    /* Alignment and positioning of img in carousel */
-    .carousel-item img {
+/* Titles for charts on the individual html and in home page */
+h2 {
+    font-size: 30px;
+    color: darkblue;
     text-align: center;
-    width:100%;
-    height:auto; 
-    }
+    padding-left: 10px;
+    padding-top: 10px;
+    text-decoration: bold;
+}
     
-    p {
-        text-align:left;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin-bottom: 20px;
-    }
+/* Navigation bar  styling */
+.navbar {
+    text-align: right;
+    background-color: rgb(15, 15, 107);
+    margin-bottom: 5px;
+}
 
-    .dropdown-item {
-        color: darkblue;
-    }
+.navbar-toggler-icon {
+    background-color: yellow;
+    opacity: 0.6;
+}
+
+.dropdown-menu {
+    width: 400px;
+    margin-left: 950px;
+    text-align: right;
+    background-color: darkblue;
+    opacity: 0.7;
+}
+
+.dropdown-menu.show {
+    display:block;
+    margin-left: auto;
+}
+
+.navbar-toggler {
+    background-color:darkblue;
+    opacity: 0.7;
+    text-align: right;
+}
+
+.dropdown-item, .nav-item {
+    color: yellow;
+}
+
+h5 {
+    color: yellow;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+footer {
+    width: 540px;
+    background-color: lightblue;
+    padding-top:5px;
+    padding-left: 10px;
+    margin-left: 20px;
+    margin-bottom:20px;
+}
+
+/* Project Summary explanation in the home page */
+h3 {
+    color: whitesmoke;
+    text-align:justify;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 10px;
+}
+
+/* Individual HTML Pages */
+
+/* Descriptions of each chart */
+#description {
+    border: solid 5px whitesmoke;
+    background-color: lightblue;
+    height: 60%;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: justify;
+}
+
+/* Choropleth */
+#population {
+    border: solid 5px whitesmoke;
+    background-color: lightblue;
+    margin-right: 10px;
+    margin-left: 10px;
+    height: auto;
+    width:780px;
+} 
+
+#gdp {
+    border: solid 5px whitesmoke;
+    background-color: lightblue;
+    text-align: center;
+    width:fit-content;
+    margin-left: 10px;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+#unemp_gdp {
+    border: solid 5px whitesmoke;
+    background-color: lightblue;
+    width: 700px;
+    margin-bottom: 30px;
+    margin-right: 10px;
+    margin-left: 20px;
+    height: auto;
+
+}
+
+#inflation {
+    border: solid 5px whitesmoke;
+    background-color: lightblue;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    text-align:center;
+    width:930px;
+    height: auto; 
+    padding-bottom:20px;
+}
+
+#description_bubbles {
+    width: 930px;
+    border: solid 5px whitesmoke;
+    background-color: lightblue;
+    height: 60%;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    text-align: justify;
+    padding: 20px;
+}
+
+/* Masonsry Grid */
+.grid-item {
+    /* width: 60%; */
+    margin-bottom: 20px;
+    margin-left: 20px; 
+} 
+
+/* Formatting of Charts in home page */
+/* background of choropleth */
+#choroplethChart {
+    border: solid 5px whitesmoke;
+    background-color: lightblue;
+    margin-top:40px;
+    width: 760px;
+}
+
+#bubble {
+    border: solid 5px whitesmoke;
+    background-color: lightblue;
+    width: 920px;
+    margin-left: 10px;
+}
+
+#bar {
+    border: solid 5px whitesmoke;
+    background-color: lightblue;
+    width:970px;
+}
+
+#beeswarm {
+    border: solid 5px whitesmoke;
+    background-color: lightblue;
+    width:700px;
+    margin-left: 10px;  
+}
     
-    .nav-item {
-        color: yellow;
-    }
-    
-    
-    #main-wrapper {
-        margin: 30px auto;
-        max-width: 1000px;
-        margin-left:350px;
-    }
-    
-    #chart {
-        margin: 0px auto;
-        width:1000px;
-        
-    }
-    
-    text {
-        fill: #000;
+/* DOM Charts */  
+
+/*Beeswarm Chart */  
+#beeswarmChart {
+    width: 675px;
+}
+
+text {
+    fill: #000;
         /*    display: none;*/
     }
     
-    text.occlabel {
-        font-size: .7rem;
-        text-anchor: middle;
-    }
+text.occlabel {
+    font-size: .7rem;
+    text-anchor: middle;
+}
     
-    .clr {
-        clear: both;
-    }
+.clr {
+    clear: both;
+}
     
-    .centered {
-        text-align: center;
-    }
+.centered {
+    text-align: center;
+}
     
-    .hidden {
-        display: none;
-        pointer-events: none;
-    }
-    /* Header
-============================ */
+.hidden {
+    display: none;
+    pointer-events: none;
+}
 
+/* Header */
 #yearmeta {
     font-size: 1.3rem;
 }
@@ -237,10 +263,7 @@
     cursor: pointer;
 }
 
-
-/* Controls
-============================ */
-
+/* Controls */
 #update {
     width: 825px;
     margin: 12px auto 20px auto;
@@ -273,18 +296,6 @@
     color: #fff;
 }
 
-
-/* Chart
-============================ */
-
-#chart {
-    position: relative;
-    margin-top: 0px;
-    margin-right: 30px;
-    /* width: 1000px; */
-    /*    top: 0px;*/
-}
-
 .axis text {
     font-size: .7rem;
 }
@@ -306,105 +317,113 @@
     display: none;
 }
 
-/* Legend
-============================ */
+/* Legend */
     
-    #legend {
-        float: right;
-        max-width: 600px;
-    }
+#legend {
+    float: right;
+    max-width: 600px;
+    height: auto;
+}
     
-    #legend .axistitle {
-        text-transform: uppercase;
-        font-size: .7rem;
-        margin-top: 10px;
-    }
+#legend .axistitle {
+    text-transform: uppercase;
+    font-size: .7rem;
+    /* margin-top: 20px; */
+}
     
-    #legend text.leglabel {
-        font-size: .7rem;
-        text-anchor: middle;
-    }
+#legend text.leglabel {
+    font-size: .7rem;
+    text-anchor: middle;
+}
     
-    #legend circle.ind {
-        fill: none;
-        stroke: #084298;
-    } 
+#legend circle.ind {
+    fill: none;
+    stroke: #084298;
+} 
 
-    /* James, add your css here */
-    
-    .countryText {
-        font-family: sans-serif;
-        fill: #fff;
-        text-anchor: middle;
-    }
-    
-    /* styles the slider */
-    
-    input[type='range'] {
-        -webkit-appearance: none !important;
-        -webkit-border-radius: 5px;
-        background-color: rgb(53, 135, 212);
-        height: 10px;
-        width: 200px;
-        margin: 20px;
-    }
-    
-    input[type='range']::-webkit-slider-thumb {
-        -webkit-appearance: none !important;
-        -webkit-border-radius: 15px;
-        background-color: #bbb;
-        background-image: -webkit-gradient(linear, left top, left bottom, from(#bbb), to(#888));
-        border: 1px solid #000;
-        height: 25px;
-        width: 25px;
-    }
-    
-    #range {
-        font: 20px sans-serif;
-    }
-    
-    input[type=range] {}
-    
-    div.tooltip {
-        position: absolute;
-        text-align: left;
-        padding: 2px;
-        font: 12px sans-serif;
-        background: #EDEDED;
-        border: 0px;
-        border-radius: 8px;
-        pointer-events: none;
-    }
-    
-    button {
-        width: 4em;
-        height: 2em;
-        background: rgb(53, 135, 212);
-        border: 1px solid rgb(53, 135, 212);
-        border-radius: 4px;
-        color: white;
-        font-size: 1.5em;
-    }
-    
-    .label {
-        font-size: 1.3em;
-        text-align: left;
-    }
-    
-    .x.axis1 {
-        font-size: 0.9em;
-    }
-    
-    .y.axis1 {
-        font-size: 0.9em;
-    }
+/* Animated Bubble chart css here */
+#chart { 
+    margin: 0px auto; 
+    padding-left:0; 
+    position: relative;
+    margin-top: 0px;
+    margin-right: 30px;
+}
 
-    /* Erin's CSS for map */
-  #map {
-      width:800px;
-      height:600px;
-  }
+.countryText {
+    font-family: sans-serif;
+    fill: #fff;
+    text-anchor: middle;
+}
+    
+/* styles the slider */
+input[type='range'] {
+    -webkit-appearance: none !important;
+    -webkit-border-radius: 5px;
+    background-color: rgb(53, 135, 212);
+    height: 10px;
+    width: 200px;
+    margin: 20px;
+}
+    
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    -webkit-border-radius: 15px;
+    background-color: #bbb;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#bbb), to(#888));
+    border: 1px solid #000;
+    height: 25px;
+    width: 25px;
+}
+    
+#range {
+    font: 20px sans-serif;
+}
+    
+input[type=range] {}
+    
+div.tooltip {
+    position: absolute;
+    text-align: left;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: #EDEDED;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+    
+button {
+    width: 4em;
+    height: 2em;
+    background: rgb(53, 135, 212);
+    border: 1px solid rgb(53, 135, 212);
+    border-radius: 4px;
+    color: white;
+    font-size: 1.5em;
+}
+    
+.label {
+    font-size: 1.3em;
+    text-align: left;
+}
+    
+.x.axis1 {
+    font-size: 0.9em;
+}
+    
+.y.axis1 {
+    font-size: 0.9em;
+}
 
-  .leaflet-popup-content {
+/* Choropleth */
+#map {
+    width:750px;
+    height:600px;
+}
+
+.leaflet-popup-content {
     text-align: center;
-  }
+}
+
+  
